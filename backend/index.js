@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: require("path").resolve(__dirname, "../.env")
+});
 const express=require("express")
 let {router}=require("./routes/AllRoutes")
 const cors=require("cors")

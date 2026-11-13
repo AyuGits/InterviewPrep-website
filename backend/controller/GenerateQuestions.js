@@ -27,7 +27,7 @@ async function GenerateQuestions(req,res){
     try{
 
     
-    const genAI = new GoogleGenerativeAI("AIzaSyCWAPOyrx820BBAQRR8-bZ29AhcvaBM1M4");
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     
     let prompt=`You are an expert resume parser. I will provide a resume text.
